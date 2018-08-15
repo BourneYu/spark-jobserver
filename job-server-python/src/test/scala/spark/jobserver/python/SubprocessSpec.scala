@@ -16,7 +16,7 @@ import scala.collection.JavaConverters._
 import scala.sys.process.Process
 
 object SubprocessSpec {
-  def getPythonDir(pathRelativeToSubProject: String): String = {
+  /*def getPythonDir(pathRelativeToSubProject: String): String = {
     /*
       When an sbt test task is run, we might be in the root project directory, or we might
       be specifically inside the python sub-module. Here we determine which and use that
@@ -40,7 +40,7 @@ object SubprocessSpec {
     val py4jPath = s"$sh/python/lib/py4j-0.10.4-src.zip"
     Seq(pysparkPath, py4jPath)
   }.getOrElse(Seq())
-  lazy val originalPythonPath = sys.env.get("PYTHONPATH")
+  lazy val originalPythonPath = sys.env.get("PYTHONPATH")*/
 }
 
 /*
@@ -48,7 +48,7 @@ object SubprocessSpec {
   so just need a class from which to build object which expose the right
   methods for the python sub process to recognise as an endpoint.
  */
-case class TestEndpoint(context: Any,
+/*case class TestEndpoint(context: Any,
                         sparkConf: SparkConf,
                         jobConfig: Config,
                         jobClass: String,
@@ -77,8 +77,9 @@ case class TestEndpoint(context: Any,
   }
 
   def getPy4JImports: java.util.List[String] = py4JImports.toList.asJava
-}
+}*/
 
+/*
 trait IdentifiedContext {
   def contextType: String
 }
@@ -372,3 +373,4 @@ class CustomContext(sparkContext: SparkContext) extends JavaSparkContext(sparkCo
 
   def customMethod: String = "Hello World"
 }
+*/
