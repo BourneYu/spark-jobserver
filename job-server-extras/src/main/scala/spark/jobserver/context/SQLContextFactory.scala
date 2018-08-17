@@ -1,10 +1,9 @@
 package spark.jobserver.context
 
 import com.typesafe.config.Config
-import org.apache.spark.{SparkContext, SparkConf}
 import org.apache.spark.sql.SQLContext
-import org.apache.spark.streaming.{Milliseconds, StreamingContext}
-import spark.jobserver.{SparkSqlJob, ContextLike, SparkStreamingJob, api}
+import org.apache.spark.{SparkConf, SparkContext}
+import spark.jobserver.{ContextLike, SparkSqlJob, api}
 
 class SQLContextFactory extends ScalaContextFactory {
 
